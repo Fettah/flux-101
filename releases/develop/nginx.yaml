@@ -15,4 +15,5 @@ spec:
     ref: master
   # will override the values from the helm chart
   values:
-    image: fettah/flux-101:develop-1
+    image: fettah/flux-101:develop-v1
+    ReplicaCount: 2
