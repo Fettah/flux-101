@@ -4,7 +4,7 @@
 
 replicaCount: 1
 
-image: nginx:latest
+image: fettah/flux-101:develop-v1
 
 nameOverride: ""
 fullnameOverride: ""
