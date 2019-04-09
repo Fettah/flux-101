@@ -16,6 +16,3 @@ spec:
   # will override the values from the helm chart
   values:
     image: fettah/flux-101:develop-1
-    replicaCount: 1
-    hpa:
-      enabled: false
