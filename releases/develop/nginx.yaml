@@ -1,0 +1,21 @@
+---
+apiVersion: flux.weave.works/v1beta1
+kind: HelmRelease
+metadata:
+  name: nginx-capgemini
+  namespace: dev
+  annotations:
+    flux.weave.works/automated: "true"
+    flux.weave.works/tag.chart-image: glob:develop-*
+spec:
+  releaseName: nginx-capgemini
+  chart:
+    git: git@github.com:fettah/flux-101
+    path: charts/nginx-capgemini
+    ref: master
+  # will override the values from the helm chart
+  values:
+    image: fettah/flux-101:develop-1
+    replicaCount: 1
+    hpa:
+      enabled: false
