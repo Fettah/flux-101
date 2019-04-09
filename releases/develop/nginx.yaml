@@ -13,7 +13,5 @@ spec:
     git: git@github.com:fettah/flux-101
     path: charts/nginx-capgemini
     ref: master
-  # will override the values from the helm chart
   values:
-    image: fettah/flux-101:develop-1
-    ReplicaCount: 2
+    image: fettah/flux-101:develop-v1
